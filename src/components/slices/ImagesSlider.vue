@@ -13,7 +13,7 @@
     </template>
     <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 mx-auto p-0">
       <div id="ImageSlider" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="false">
-        <div class="carousel-indicators d-md-block">
+        <div class="carousel-indicators">
             <template v-for="(item,index) in slice.items">
               <template v-if="index == 0">
                 <button :key="item.id" type="button" data-bs-target="#ImageSlider" :data-bs-slide-to="index" :aria-label="'Slide ' + (index + 1)" class="active" aria-current="true">{{ item.year }}</button>
@@ -53,40 +53,16 @@ export default {
 
 
 <style scoped>
-.carousel-indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 5%;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0;
-  margin-bottom: 1.5rem;
-  list-style: none;
-  margin-left: 0;
-  margin-right: 0;
+.carousel-indicators [data-bs-target]:first-child {
+  padding-left: 0px;
 }
-.carousel-indicators [data-bs-target] {
-  padding: 30px;
-  text-indent: 0;
-  border: none;
-  color: #fff;
-  margin-right: 20px;
-  background-color: transparent;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  font-size: 30px;
-}
-.carousel-indicators [data-bs-target].active, .carousel-indicators [data-bs-target]:hover {
+.carousel-indicators .active {
   color: #e10098;
-  padding: 0 6px;
   font-weight: bold;
-  background-color: transparent;        
+}
+.carousel-indicators [data-bs-target]:not(.active):hover,.carousel-indicators [data-bs-target]:not(.active):focus {
+  color: #e10098;      
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   .carousel-caption {
@@ -98,11 +74,19 @@ export default {
     padding-bottom: 1.25rem;
     color: #fff;
     text-align: left;
-    
   }
   
 }
 @media (max-width: 767px) {
+  .carousel-indicators {
+    left: 15px;
+    justify-content: space-evenly;
+  }
+  .carousel-indicators [data-bs-target] {
+    padding-left: 0px;
+    background-color: transparent;
+    font-size: 9px;
+  }
   .carousel-caption {
     position: absolute;
     right: 0%;
@@ -112,18 +96,6 @@ export default {
     padding-bottom: 0;
     color: #fff;
     text-align: left;
-    
-  }
-  .carousel-indicators [data-bs-target] {
-    padding: 0px;
-    text-indent: 0;
-    border: none;
-    color: #fff;
-    margin-right: 6px;
-    background-color: transparent;
-    -webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-    font-size: 8px;
   }
 }
 .carousel-caption .small>p>a {

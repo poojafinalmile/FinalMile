@@ -13,7 +13,7 @@
                 :from="0"
                 :to="item.number"
                 :format="theFormat"
-                :duration="15"
+                :duration="20"
                 :delay="1"
                  easing="Power0.easeNone"/>
              </div>
@@ -46,6 +46,11 @@ export default {
   color:#ffffff;
 }
 @media (min-width: 1200px) { 
+  .number span {
+    font: 700 60px system-ui;
+  }
+ }
+@media (min-width: 1400px) { 
   .number span {
     font: 700 70px system-ui;
   }

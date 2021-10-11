@@ -11,29 +11,27 @@
             "type": "Group",
             "config": {
                 "fields": {
-                    "tagline": {
+                    "page_title": {
                         "type": "StructuredText",
                         "config": {
-                            "single": "paragraph",
-                            "label": "Tagline",
-                            "placeholder": "Site Tagline..."
+                            "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                            "label": "page title",
+                            "placeholder": "Page title"
+                        }
+                    },
+                    "page_subtitle": {
+                        "type": "StructuredText",
+                        "config": {
+                            "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                            "label": "page subtitle",
+                            "placeholder": "Page subtitle"
                         }
                     },
                     "button_link": {
                         "type": "Link",
                         "config": {
-                            "label": "Button Link"
-                        }
-                    },
-                    "image": {
-                        "type": "Image",
-                        "config": {
-                            "constraint": {
-                                "width": 200,
-                                "height": 200
-                            },
-                            "thumbnails": [],
-                            "label": "Banner Image"
+                            "label": "Button Link",
+                            "select": null
                         }
                     },
                     "button_label": {
@@ -46,22 +44,6 @@
                 },
                 "label": "Homepage Banner",
                 "repeat": false
-            }
-        },
-        "background_image": {
-            "type": "Image",
-            "config": {
-                "constraint": {},
-                "thumbnails": [],
-                "label": "Background image"
-            }
-        },
-        "background_image_mobile": {
-            "type": "Image",
-            "config": {
-                "constraint": {},
-                "thumbnails": [],
-                "label": "Background image mobile"
             }
         },
         "page_content": {
@@ -168,7 +150,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "link",
-                                    "placeholder": "Url"
+                                    "placeholder": "Url",
+                                    "select": null
                                 }
                             },
                             "label": {
@@ -254,7 +237,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Link",
-                                    "placeholder": "Url"
+                                    "placeholder": "Url",
+                                    "select": null
                                 }
                             },
                             "label": {
@@ -316,7 +300,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Featured Link",
-                                    "placeholder": "Optional Link"
+                                    "placeholder": "Optional Link",
+                                    "select": null
                                 }
                             },
                             "link_label": {
@@ -367,7 +352,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Featured Link",
-                                    "placeholder": "Optional Link"
+                                    "placeholder": "Optional Link",
+                                    "select": null
                                 }
                             },
                             "link_label": {
@@ -434,7 +420,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Featured Link",
-                                    "placeholder": "Optional Link"
+                                    "placeholder": "Optional Link",
+                                    "select": null
                                 }
                             },
                             "link_label": {
@@ -501,7 +488,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Featured Link",
-                                    "placeholder": "Optional Link"
+                                    "placeholder": "Optional Link",
+                                    "select": null
                                 }
                             },
                             "link_label": {
@@ -568,7 +556,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Featured link",
-                                    "placeholder": "Optional Link"
+                                    "placeholder": "Optional Link",
+                                    "select": null
                                 }
                             },
                             "link_label": {
@@ -813,7 +802,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Featured Link",
-                                    "placeholder": "Optional Link"
+                                    "placeholder": "Optional Link",
+                                    "select": null
                                 }
                             },
                             "link_label": {
@@ -869,7 +859,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Featured Link",
-                                    "placeholder": "Optional Link"
+                                    "placeholder": "Optional Link",
+                                    "select": null
                                 }
                             },
                             "link_label": {
@@ -977,7 +968,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Link",
-                                    "placeholder": "Url"
+                                    "placeholder": "Url",
+                                    "select": null
                                 }
                             },
                             "label": {
@@ -1052,7 +1044,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Featured Link",
-                                    "placeholder": "Optional Link"
+                                    "placeholder": "Optional Link",
+                                    "select": null
                                 }
                             },
                             "link_label": {
@@ -1221,7 +1214,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Featured link",
-                                    "placeholder": "Optional Link"
+                                    "placeholder": "Optional Link",
+                                    "select": null
                                 }
                             },
                             "link_label": {
@@ -1312,7 +1306,8 @@
                             "button_link": {
                                 "type": "Link",
                                 "config": {
-                                    "label": "Button Link"
+                                    "label": "Button Link",
+                                    "select": null
                                 }
                             },
                             "button_label": {
@@ -1376,7 +1371,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Link",
-                                    "placeholder": "Url"
+                                    "placeholder": "Url",
+                                    "select": null
                                 }
                             },
                             "label": {
@@ -1474,7 +1470,8 @@
                                 "type": "Link",
                                 "config": {
                                     "label": "Link",
-                                    "placeholder": "Link"
+                                    "placeholder": "Link",
+                                    "select": null
                                 }
                             },
                             "label": {
