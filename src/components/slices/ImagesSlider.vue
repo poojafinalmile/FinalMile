@@ -12,7 +12,7 @@
       </div>
     </template>
     <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 mx-auto p-0">
-      <div id="ImageSlider" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="false">
+      <div id="ImageSlider" class="carousel slide pointer-event" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="false">
         <div class="carousel-indicators">
             <template v-for="(item,index) in slice.items">
               <template v-if="index == 0">
