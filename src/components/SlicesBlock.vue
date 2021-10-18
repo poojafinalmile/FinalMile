@@ -130,6 +130,10 @@
             <template v-else-if="slice.slice_type === 'icon_area'">
                 <icon-area :slice="slice"/>
             </template>
+            <!-- Icon Area component -->
+            <template v-else-if="slice.slice_type === 'job_circular'">
+                <job-circular :slice="slice"/>
+            </template>
         </section>
     </main>
 </template>
@@ -168,6 +172,7 @@ const ProfileSlice = () => import("./slices/ProfileSlice.vue");
 const BlankSpace = () => import("./slices/BlankSpace.vue");
 const ArrowSlice = () => import("./slices/ArrowSlice.vue");
 const IconArea = () => import("./slices/IconArea.vue");
+const JobCircular = () => import("./slices/JobCircular.vue");
 
 export default {
   props: ['slices'],
@@ -204,7 +209,8 @@ export default {
     ProfileSlice,
     BlankSpace,
     ArrowSlice,
-    IconArea
+    IconArea,
+    JobCircular
   },
 }
 </script>
